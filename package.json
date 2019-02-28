@@ -1,0 +1,14 @@
+{
+  "name": "saas-ui",
+  "version": "1.0.0",
+  "description": "project to learn sass",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "author": "Luiz Daniel Lima",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.11.0"
+  }
+}

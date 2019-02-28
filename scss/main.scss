@@ -1,0 +1,95 @@
+$primary-font: "Titan One", cursive;
+$secondary-font: "Roboto", sans-serif;
+$primary-color: #333;
+$secondary-color: #eee;
+$button-color: #eee;
+
+* {
+  margin: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+}
+
+@mixin highlight {
+  background-color: lighten($button-color, 20%);
+  transition: all 0.5s ease-out;
+}
+
+body {
+  position: relative;
+  font-family: $secondary-font;
+  color: $primary-color;
+  background-color: $secondary-color;
+  text-align: center;
+}
+
+.wrapper {
+  width: 1100px;
+  margin: 50px auto;
+}
+
+h1 {
+  font-family: $primary-font;
+  font-size: 5em;
+  background-image: url("../assets/colorful-background-preview-4.jpg");
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.copyBtn {
+  display: inline-block;
+  cursor: pointer;
+  background-color: $button-color;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: 1px solid #bbb;
+  border-radius: 20px;
+
+  &:hover {
+    background-color: lighten($button-color, 20%);
+  }
+}
+
+%colorSwatch {
+  cursor: pointer;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+
+  &:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in;
+  }
+}
+
+@mixin setSwatches($colorName, $colorValue) {
+  .group-#{$colorName} > div {
+    @extend %colorSwatch;
+    background-color: $colorValue;
+  }
+
+  @for $i from 20 through 100 {
+    @if $i % 10 == 0 {
+      $percentage: $i * 1%;
+      .group-#{$colorName} .darken-#{$colorName}-#{$i} {
+        background-color: mix(black, $colorValue, $percentage);
+      }
+      .group-#{$colorName} .lighten-#{$colorName}-#{$i} {
+        background-color: mix(white, $colorValue, $percentage);
+      }
+    }
+  }
+}
+
+@include setSwatches("red", #ff0000);
+@include setSwatches("blue", #0000ff);
+@include setSwatches("yellow", #ffff00);
+@include setSwatches("orange", #ffa500);
+@include setSwatches("purple", #800080);
+@include setSwatches("green", #008000);

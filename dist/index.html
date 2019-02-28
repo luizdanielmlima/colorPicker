@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto|Titan+One"
+      rel="stylesheet"
+    />
+    <title>Simple UI with Sass</title>
+  </head>
+
+  <script src="main.js"></script>
+
+  <body>
+    <div class="wrapper">
+      <h1>COLOR PICKER</h1>
+      <br />
+      <h2>#00FF00</h2>
+      <a class="copyBtn">Copy to Clipboard</a>
+      <!-- YELLOW SWATCHES -->
+      <div class="group-yellow">
+        <div class="darken-yellow-100"></div>
+        <div class="darken-yellow-90"></div>
+        <div class="darken-yellow-80"></div>
+        <div class="darken-yellow-70"></div>
+        <div class="darken-yellow-60"></div>
+        <div class="darken-yellow-50"></div>
+        <div class="darken-yellow-40"></div>
+        <div class="darken-yellow-30"></div>
+        <div class="darken-yellow-20"></div>
+        <div></div>
+        <div class="lighten-yellow-20"></div>
+        <div class="lighten-yellow-30"></div>
+        <div class="lighten-yellow-40"></div>
+        <div class="lighten-yellow-50"></div>
+        <div class="lighten-yellow-60"></div>
+        <div class="lighten-yellow-70"></div>
+        <div class="lighten-yellow-80"></div>
+        <div class="lighten-yellow-90"></div>
+        <div class="lighten-yellow-100"></div>
+      </div>
+
+      <!-- ORANGE SWATCHES -->
+      <div class="group-orange">
+        <div class="darken-orange-100"></div>
+        <div class="darken-orange-90"></div>
+        <div class="darken-orange-80"></div>
+        <div class="darken-orange-70"></div>
+        <div class="darken-orange-60"></div>
+        <div class="darken-orange-50"></div>
+        <div class="darken-orange-40"></div>
+        <div class="darken-orange-30"></div>
+        <div class="darken-orange-20"></div>
+        <div></div>
+        <div class="lighten-orange-20"></div>
+        <div class="lighten-orange-30"></div>
+        <div class="lighten-orange-40"></div>
+        <div class="lighten-orange-50"></div>
+        <div class="lighten-orange-60"></div>
+        <div class="lighten-orange-70"></div>
+        <div class="lighten-orange-80"></div>
+        <div class="lighten-orange-90"></div>
+        <div class="lighten-orange-100"></div>
+      </div>
+
+      <!-- RED SWATCHES -->
+      <div class="group-red">
+        <div class="darken-red-100"></div>
+        <div class="darken-red-90"></div>
+        <div class="darken-red-80"></div>
+        <div class="darken-red-70"></div>
+        <div class="darken-red-60"></div>
+        <div class="darken-red-50"></div>
+        <div class="darken-red-40"></div>
+        <div class="darken-red-30"></div>
+        <div class="darken-red-20"></div>
+        <div></div>
+        <div class="lighten-red-20"></div>
+        <div class="lighten-red-30"></div>
+        <div class="lighten-red-40"></div>
+        <div class="lighten-red-50"></div>
+        <div class="lighten-red-60"></div>
+        <div class="lighten-red-70"></div>
+        <div class="lighten-red-80"></div>
+        <div class="lighten-red-90"></div>
+        <div class="lighten-red-100"></div>
+      </div>
+
+      <!-- PURPLE SWATCHES -->
+      <div class="group-purple">
+        <div class="darken-purple-100"></div>
+        <div class="darken-purple-90"></div>
+        <div class="darken-purple-80"></div>
+        <div class="darken-purple-70"></div>
+        <div class="darken-purple-60"></div>
+        <div class="darken-purple-50"></div>
+        <div class="darken-purple-40"></div>
+        <div class="darken-purple-30"></div>
+        <div class="darken-purple-20"></div>
+        <div></div>
+        <div class="lighten-purple-20"></div>
+        <div class="lighten-purple-30"></div>
+        <div class="lighten-purple-40"></div>
+        <div class="lighten-purple-50"></div>
+        <div class="lighten-purple-60"></div>
+        <div class="lighten-purple-70"></div>
+        <div class="lighten-purple-80"></div>
+        <div class="lighten-purple-90"></div>
+        <div class="lighten-purple-100"></div>
+      </div>
+
+      <!-- BLUE SWATCHES -->
+      <div class="group-blue">
+        <div class="darken-blue-100"></div>
+        <div class="darken-blue-90"></div>
+        <div class="darken-blue-80"></div>
+        <div class="darken-blue-70"></div>
+        <div class="darken-blue-60"></div>
+        <div class="darken-blue-50"></div>
+        <div class="darken-blue-40"></div>
+        <div class="darken-blue-30"></div>
+        <div class="darken-blue-20"></div>
+        <div></div>
+        <div class="lighten-blue-20"></div>
+        <div class="lighten-blue-30"></div>
+        <div class="lighten-blue-40"></div>
+        <div class="lighten-blue-50"></div>
+        <div class="lighten-blue-60"></div>
+        <div class="lighten-blue-70"></div>
+        <div class="lighten-blue-80"></div>
+        <div class="lighten-blue-90"></div>
+        <div class="lighten-blue-100"></div>
+      </div>
+
+      <!-- GREEN SWATCHES -->
+      <div class="group-green">
+        <div class="darken-green-100"></div>
+        <div class="darken-green-90"></div>
+        <div class="darken-green-80"></div>
+        <div class="darken-green-70"></div>
+        <div class="darken-green-60"></div>
+        <div class="darken-green-50"></div>
+        <div class="darken-green-40"></div>
+        <div class="darken-green-30"></div>
+        <div class="darken-green-20"></div>
+        <div></div>
+        <div class="lighten-green-20"></div>
+        <div class="lighten-green-30"></div>
+        <div class="lighten-green-40"></div>
+        <div class="lighten-green-50"></div>
+        <div class="lighten-green-60"></div>
+        <div class="lighten-green-70"></div>
+        <div class="lighten-green-80"></div>
+        <div class="lighten-green-90"></div>
+        <div class="lighten-green-100"></div>
+      </div>
+    </div>
+  </body>
+</html>
