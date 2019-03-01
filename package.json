@@ -9,9 +9,8 @@
   },
   "author": "Luiz Daniel Lima",
   "license": "MIT",
-  "homepage": "https:/luizdanielmlima.github.io/colorpicker",
+  "homepage": "https:/luizdanielmlima.github.io/colorPicker",
   "dependencies": {
-    "clipboard": "^2.0.4",
     "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0"
   }
