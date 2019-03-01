@@ -12,12 +12,12 @@ body {
 
 .wrapper {
   width: 1160px;
-  height: 800px;
+  height: 820px;
   margin: 50px auto;
   background-color: white;
-  border-radius: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15); }
+  border: 1px solid #bbb;
+  border-radius: 0.5em;
+  box-shadow: 0 1em 8em rgba(0, 0, 0, 0.35); }
 
 h1 {
   margin: 30px 0px;
@@ -30,6 +30,22 @@ h1 {
   color: transparent;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); }
 
+.clipboard-area {
+  position: relative; }
+
+.clipboard-area #ok-msg, .clipboard-area #error-msg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-out; }
+
+.clipboard-area #ok-msg {
+  color: green; }
+
+.clipboard-area #error-msg {
+  color: red; }
+
 .copyBtn {
   display: inline-block;
   cursor: pointer;
@@ -41,20 +57,24 @@ h1 {
   .copyBtn:hover {
     background-color: white; }
 
-.group-yellow > div, .group-red > div, .group-blue > div, .group-orange > div, .group-purple > div, .group-green > div {
+#swatch-sample, .group-yellow > div, .group-red > div, .group-blue > div, .group-orange > div, .group-purple > div, .group-green > div {
   cursor: pointer;
   border: 1px solid #bbb;
   border-radius: 50%;
   width: 40px;
   height: 40px;
   display: inline-block; }
-  .group-yellow > div:hover, .group-red > div:hover, .group-blue > div:hover, .group-orange > div:hover, .group-purple > div:hover, .group-green > div:hover {
-    border: 2px solid #444;
-    transform: scale(1.1);
-    transition: all 0.15s ease-in; }
+
+.color-sample {
+  display: flex;
+  justify-content: center; }
 
 .group-yellow > div {
   background-color: #ffff00; }
+  .group-yellow > div:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in; }
 
 .group-yellow #darken-yellow-20 {
   background-color: #cccc00; }
@@ -112,6 +132,10 @@ h1 {
 
 .group-red > div {
   background-color: #ff0000; }
+  .group-red > div:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in; }
 
 .group-red #darken-red-20 {
   background-color: #cc0000; }
@@ -169,6 +193,10 @@ h1 {
 
 .group-blue > div {
   background-color: #0000ff; }
+  .group-blue > div:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in; }
 
 .group-blue #darken-blue-20 {
   background-color: #0000cc; }
@@ -226,6 +254,10 @@ h1 {
 
 .group-orange > div {
   background-color: #ffa500; }
+  .group-orange > div:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in; }
 
 .group-orange #darken-orange-20 {
   background-color: #cc8400; }
@@ -283,6 +315,10 @@ h1 {
 
 .group-purple > div {
   background-color: #800080; }
+  .group-purple > div:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in; }
 
 .group-purple #darken-purple-20 {
   background-color: #660066; }
@@ -340,6 +376,10 @@ h1 {
 
 .group-green > div {
   background-color: #008000; }
+  .group-green > div:hover {
+    border: 2px solid #444;
+    transform: scale(1.1);
+    transition: all 0.15s ease-in; }
 
 .group-green #darken-green-20 {
   background-color: #006600; }

@@ -9,19 +9,33 @@
       href="https://fonts.googleapis.com/css?family=Roboto|Titan+One"
       rel="stylesheet"
     />
-    <title>Simple UI with Sass</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css"
+    />
+    <title>Color Picker with Sass and Clipboard.js</title>
   </head>
 
+  <script src="../node_modules/clipboard/dist/clipboard.min.js"></script>
   <script src="main.js"></script>
 
   <body>
     <div class="wrapper">
       <h1>COLOR PICKER</h1>
       <br />
-      <h2 id="colorText">#00FF00</h2>
-      <a class="copyBtn" data-clipboard-target="#colorText"
-        >Copy to Clipboard</a
-      >
+      <div class="color-sample">
+        <div id="swatch-sample"></div>
+        <h2 id="colorValueTxt" style="min-width: 110px;">
+          Select the color below
+        </h2>
+      </div>
+      <div class="clipboard-area">
+        <p id="ok-msg">copied!</p>
+        <p id="error-msg">error!</p>
+        <a class="copyBtn" data-clipboard-target="#colorValueTxt"
+          >Copy to Clipboard</a
+        >
+      </div>
       <!-- YELLOW SWATCHES -->
       <div class="group-yellow">
         <div id="darken-yellow-100"></div>
@@ -33,7 +47,7 @@
         <div id="darken-yellow-40"></div>
         <div id="darken-yellow-30"></div>
         <div id="darken-yellow-20"></div>
-        <div></div>
+        <div id="yellow"></div>
         <div id="lighten-yellow-20"></div>
         <div id="lighten-yellow-30"></div>
         <div id="lighten-yellow-40"></div>
@@ -56,7 +70,7 @@
         <div id="darken-orange-40"></div>
         <div id="darken-orange-30"></div>
         <div id="darken-orange-20"></div>
-        <div></div>
+        <div id="orange"></div>
         <div id="lighten-orange-20"></div>
         <div id="lighten-orange-30"></div>
         <div id="lighten-orange-40"></div>
@@ -79,7 +93,7 @@
         <div id="darken-red-40"></div>
         <div id="darken-red-30"></div>
         <div id="darken-red-20"></div>
-        <div></div>
+        <div id="red"></div>
         <div id="lighten-red-20"></div>
         <div id="lighten-red-30"></div>
         <div id="lighten-red-40"></div>
@@ -102,7 +116,7 @@
         <div id="darken-purple-40"></div>
         <div id="darken-purple-30"></div>
         <div id="darken-purple-20"></div>
-        <div></div>
+        <div id="purple"></div>
         <div id="lighten-purple-20"></div>
         <div id="lighten-purple-30"></div>
         <div id="lighten-purple-40"></div>
@@ -125,7 +139,7 @@
         <div id="darken-blue-40"></div>
         <div id="darken-blue-30"></div>
         <div id="darken-blue-20"></div>
-        <div></div>
+        <div id="blue"></div>
         <div id="lighten-blue-20"></div>
         <div id="lighten-blue-30"></div>
         <div id="lighten-blue-40"></div>
@@ -148,7 +162,7 @@
         <div id="darken-green-40"></div>
         <div id="darken-green-30"></div>
         <div id="darken-green-20"></div>
-        <div></div>
+        <div id="green"></div>
         <div id="lighten-green-20"></div>
         <div id="lighten-green-30"></div>
         <div id="lighten-green-40"></div>

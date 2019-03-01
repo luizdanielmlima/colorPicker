@@ -1,10 +1,19 @@
-console.log("main.js running");
-var clipboard = new ClipboardJS(".copyBtn");
-
 window.onload = function() {
+  //getting the elements from the DOM
+  let sampleSwatch = document.getElementById("swatch-sample");
+  let textEl = document.getElementById("colorValueTxt");
+  let okMsg = document.getElementById("ok-msg");
+  let errorMsg = document.getElementById("error-msg");
+
   function setColorsListeners() {
     colors = ["yellow", "red", "blue", "green", "orange", "purple"];
     for (let color of colors) {
+      //sets a listener to the "base color"...
+      document
+        .getElementById(color)
+        .addEventListener("click", showColor, false);
+
+      //... and then to all the variates
       setSwatchListeners(color);
     }
   }
@@ -46,8 +55,20 @@ window.onload = function() {
       "#" + fullColorHex(components.red, components.green, components.blue);
 
     //shows the hex color in the UI
-    let textEl = document.getElementById("colorText");
+    animateCSS(textEl, "flipInX");
     textEl.innerHTML = hexColor;
+    sampleSwatch.style.backgroundColor = hexColor;
+  }
+
+  function animateCSS(element, animationName) {
+    const node = element;
+    node.classList.add("animated", animationName);
+
+    function handleAnimationEnd() {
+      node.classList.remove("animated", animationName);
+    }
+
+    node.addEventListener("animationend", handleAnimationEnd);
   }
 
   var fullColorHex = function(r, g, b) {
@@ -66,4 +87,19 @@ window.onload = function() {
   };
 
   setColorsListeners();
+
+  var clipboard = new ClipboardJS(".copyBtn");
+  clipboard.on("success", function(e) {
+    // console.log(e);
+    okMsg.style.opacity = "0.7";
+    this.setTimeout(() => {
+      okMsg.style.opacity = "0";
+    }, 2000);
+  });
+  clipboard.on("error", function(e) {
+    errorMsg.style.opacity = "0.7";
+    this.setTimeout(() => {
+      errorMsg.style.opacity = "0";
+    }, 2000);
+  });
 };

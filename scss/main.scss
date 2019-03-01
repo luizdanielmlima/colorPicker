@@ -25,12 +25,12 @@ body {
 
 .wrapper {
   width: 1160px;
-  height: 800px;
+  height: 820px;
   margin: 50px auto;
   background-color: white;
-  border-radius: 20px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+  border: 1px solid #bbb;
+  border-radius: 0.5em;
+  box-shadow: 0 1em 8em rgba(black, 0.35);
 }
 
 h1 {
@@ -43,6 +43,28 @@ h1 {
   -webkit-background-clip: text;
   color: transparent;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.clipboard-area {
+  position: relative;
+}
+
+%msg {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.clipboard-area #ok-msg {
+  @extend %msg;
+  color: green;
+}
+
+.clipboard-area #error-msg {
+  @extend %msg;
+  color: red;
 }
 
 .copyBtn {
@@ -66,18 +88,26 @@ h1 {
   width: 40px;
   height: 40px;
   display: inline-block;
+}
 
-  &:hover {
-    border: 2px solid #444;
-    transform: scale(1.1);
-    transition: all 0.15s ease-in;
-  }
+.color-sample {
+  display: flex;
+  justify-content: center;
+}
+
+#swatch-sample {
+  @extend %colorSwatch;
 }
 
 @mixin setSwatches($colorName, $colorValue) {
   .group-#{$colorName} > div {
     @extend %colorSwatch;
     background-color: $colorValue;
+    &:hover {
+      border: 2px solid #444;
+      transform: scale(1.1);
+      transition: all 0.15s ease-in;
+    }
   }
 
   @for $i from 20 through 100 {
