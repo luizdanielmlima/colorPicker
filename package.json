@@ -1,7 +1,7 @@
 {
-  "name": "saas-ui",
+  "name": "color-picker",
   "version": "1.0.0",
-  "description": "project to learn sass",
+  "description": "color picker, a project to learn sass",
   "main": "index.html",
   "scripts": {
     "sass": "node-sass -w scss/ -o dist/css/ --recursive"
