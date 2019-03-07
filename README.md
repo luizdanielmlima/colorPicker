@@ -2,6 +2,8 @@
 
 I made this app to learn some Sass, so I came up with this idea of a color picker, where the colors are generated with the @for. I also learned to use @mixin, @extend and @include.
 
+[Watch the demo](https://luizdanielmlima.github.io/colorPicker/)
+
 ## Some Observations
 
 - I think mixins are the best feature in Sass, very powerful!
